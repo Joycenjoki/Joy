@@ -1,3 +1,7 @@
+<?php include('server.php');?>
+if(empty($_SESSION['username']))
+{header ('location: login.php');
+}
 <html>
 <head>
 <title>User Resistration Using Php and Mysql</title>
@@ -21,9 +25,9 @@
 	  <div>
 	  <?php endif ?>
 	  
-	  <?php if (isset ($_SESSION['username'])):?>
+	  <?php if (isset ($_SESSION['username'])): ?>
 	  <p> welcome <strong><?php echo $_SESSION ['username']; ?></strong></p>
-	  <p><a href="index.php? logout='1'" style="color:red";>Log Out</a></p>
+	  <p><a href="" logout='1'" style="color:red";>Log Out</a></p>
 
 	  <?php endif ?>
 </div>
